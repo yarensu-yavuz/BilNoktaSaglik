@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div>>
+        Giriş sayfasına hoşgeldiniz
+        Kullanıcı adı ve şifreyi giriniz
+    </div>
+    <div>
+       //// Girişyapılan bilgiler
+       ////////@*@model *@string[]
+       //// <table width="!00%" border="1">
+       //// <tr>
+      ///*@for/(int i=0;i<Model.Count();i++)*/
+       //// <td>
+        
+       // @Model[i]</td>
+               
+      
+        
+        
+       // </tr>
+        
+        
+        
+       // </table>
+
+
+        @model hafta6mvc.Models.Kullanici //modelden viewa direkt erişim
+                <li>@Model.KullaniciAdi< /li>
+    </div>
+}
