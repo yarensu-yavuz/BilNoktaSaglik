@@ -4,7 +4,7 @@ namespace BilNoktaSaglik.Web.Controllers
 {
     public class AboutUsController : Controller
     {
-        public IActionResult Index()
+        public IActionResult AboutIndex()
         {
             return View();
         }

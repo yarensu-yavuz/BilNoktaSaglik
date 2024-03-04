@@ -4,7 +4,7 @@ namespace BilNoktaSaglik.Web.Controllers
 {
     public class HomePageController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HomeIndex()
         {
             return View();
         }
