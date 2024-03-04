@@ -26,10 +26,23 @@ namespace BilNoktaSaglik.Web
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            
 
+            app.UseEndpoints(endpoints =>
+            {
+
+
+                endpoints.MapAreaControllerRoute(
+                  name: "areas",
+                  areaName: "AdminPanel",
+                  pattern: "AdminPanel/{controller=Home}/{action=LayoutPageIndex}/{id?}"
+                );
+
+                app.MapControllerRoute(
+              name: "default",
+              pattern: "{controller=Home}/{action=HomeIndex}/{id?}");
+
+            });
             app.Run();
         }
     }

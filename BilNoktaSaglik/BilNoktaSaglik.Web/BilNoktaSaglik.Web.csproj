@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\AdminPanel\Data\" />
+    <Folder Include="Areas\AdminPanel\Models\" />
     <Folder Include="Models\" />
+    <Folder Include="wwwroot\Adminlte\" />
   </ItemGroup>
 
   <ItemGroup>
