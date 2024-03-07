@@ -2,9 +2,9 @@
 
 namespace BilNoktaSaglik.Web.Controllers
 {
-    public class ServicesController : Controller
+    public class TestimonialController : Controller
     {
-        public IActionResult ServicesIndex()
+        public IActionResult TestimonialIndex()
         {
             return View();
         }
