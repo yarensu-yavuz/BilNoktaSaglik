@@ -4,7 +4,7 @@ namespace BilNoktaSaglik.Web.Areas.AdminPanel.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult HomeIndex()
         {
             return View();
         }
