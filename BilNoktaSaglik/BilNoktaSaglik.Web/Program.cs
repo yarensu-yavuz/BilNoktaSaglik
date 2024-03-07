@@ -1,3 +1,7 @@
+using BilNoktaSaglik.Repository;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+
 namespace BilNoktaSaglik.Web
 {
     public class Program
@@ -8,6 +12,16 @@ namespace BilNoktaSaglik.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+
+            builder.Services.AddDbContext<BilNoktaSaglikDB>(k =>
+            {
+
+                k.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), option =>
+                {
+                    option.MigrationsAssembly(Assembly.GetAssembly(typeof(BilNoktaSaglikDB)).GetName().Name);
+                });
+            });
 
             var app = builder.Build();
 
@@ -30,8 +44,6 @@ namespace BilNoktaSaglik.Web
 
             app.UseEndpoints(endpoints =>
             {
-
-
                 endpoints.MapAreaControllerRoute(
                   name: "areas",
                   areaName: "AdminPanel",

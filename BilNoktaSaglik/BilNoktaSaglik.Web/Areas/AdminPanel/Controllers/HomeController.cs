@@ -9,10 +9,7 @@ namespace BilNoktaSaglik.Web.Areas.AdminPanel.Controllers
             return View();
         }
 
-        public IActionResult LayoutPageIndex()
-        {
-            return View();
-        }
+      
 
     }
 }
