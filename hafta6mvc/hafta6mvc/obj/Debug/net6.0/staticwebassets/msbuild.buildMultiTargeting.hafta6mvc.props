@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\hafta6mvc.props" />
+</Project>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\YarenSuYavuz2.props" />
+</Project>
