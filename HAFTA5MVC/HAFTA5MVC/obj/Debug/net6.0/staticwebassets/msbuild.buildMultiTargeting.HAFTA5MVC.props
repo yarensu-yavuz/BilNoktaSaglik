@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\HAFTA5MVC.props" />
-</Project>

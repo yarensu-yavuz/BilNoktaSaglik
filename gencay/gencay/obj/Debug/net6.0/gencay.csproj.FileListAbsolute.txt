@@ -1,8 +1,0 @@
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.csproj.AssemblyReference.cache
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.AssemblyInfoInputs.cache
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.AssemblyInfo.cs
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.RazorAssemblyInfo.cache
-C:\Users\user\source\repos\gencay\gencay\obj\Debug\net6.0\gencay.RazorAssemblyInfo.cs
