@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilNoktaSaglik.Repository.Repository
 {
-    internal class Repository<TEntity>:
+    internal class Repository
     {
     }
 }
