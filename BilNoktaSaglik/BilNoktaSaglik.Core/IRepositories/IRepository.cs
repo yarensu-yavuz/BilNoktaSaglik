@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BilNoktaSaglik.Core.IRepository
+namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IRepository<TEntity> where TEntity : class
     {
@@ -20,7 +20,11 @@ namespace BilNoktaSaglik.Core.IRepository
         //Crud=> table
         //Rules,Users, products,Categoris
 
-        void Add(T entity);
+        void Add(TEntity entity);
+        void Update(TEntity entity);
+        void Delete(TEntity entity);
+
+        IQueryable<TEntity> GetAll();
 
 
     }

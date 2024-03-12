@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BilNoktaSaglik.Core.IRepository
+namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IUsers:IRepository<Users>
     {
