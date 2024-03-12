@@ -5,13 +5,17 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilNoktaSaglik.Web", "BilNoktaSaglik.Web\BilNoktaSaglik.Web.csproj", "{FACDA8AB-B219-4A7B-B120-0BD2774C18D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilNoktaSaglik.Core", "BilNoktaSaglik.Core\BilNoktaSaglik.Core.csproj", "{F97BCBE4-27A4-4B7E-A42B-60AC88FF9ECD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilNoktaSaglik.Core", "BilNoktaSaglik.Core\BilNoktaSaglik.Core.csproj", "{F97BCBE4-27A4-4B7E-A42B-60AC88FF9ECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilNoktaSaglik.Repository", "BilNoktaSaglik.Repository\BilNoktaSaglik.Repository.csproj", "{86E05EF9-D42C-4D06-A6A5-ACA2D5231885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilNoktaSaglik.Repository", "BilNoktaSaglik.Repository\BilNoktaSaglik.Repository.csproj", "{86E05EF9-D42C-4D06-A6A5-ACA2D5231885}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NLayer", "NLayer", "{32DC1001-93D9-4565-AD07-D34D6DB32D73}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{119B0091-437E-424B-9038-33CE184FDC66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilNoktaSaglik.API", "BilNoktaSaglik.API\BilNoktaSaglik.API.csproj", "{967B1069-B0D0-4EEC-BC05-DB188550843D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilNoktaSaglik.Service", "BilNoktaSaglik.Service\BilNoktaSaglik.Service.csproj", "{579331BB-BD1B-4614-B061-4D1ECA412E5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{86E05EF9-D42C-4D06-A6A5-ACA2D5231885}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86E05EF9-D42C-4D06-A6A5-ACA2D5231885}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86E05EF9-D42C-4D06-A6A5-ACA2D5231885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967B1069-B0D0-4EEC-BC05-DB188550843D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967B1069-B0D0-4EEC-BC05-DB188550843D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967B1069-B0D0-4EEC-BC05-DB188550843D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967B1069-B0D0-4EEC-BC05-DB188550843D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579331BB-BD1B-4614-B061-4D1ECA412E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579331BB-BD1B-4614-B061-4D1ECA412E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579331BB-BD1B-4614-B061-4D1ECA412E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579331BB-BD1B-4614-B061-4D1ECA412E5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +51,8 @@ Global
 		{FACDA8AB-B219-4A7B-B120-0BD2774C18D9} = {119B0091-437E-424B-9038-33CE184FDC66}
 		{F97BCBE4-27A4-4B7E-A42B-60AC88FF9ECD} = {32DC1001-93D9-4565-AD07-D34D6DB32D73}
 		{86E05EF9-D42C-4D06-A6A5-ACA2D5231885} = {32DC1001-93D9-4565-AD07-D34D6DB32D73}
+		{967B1069-B0D0-4EEC-BC05-DB188550843D} = {119B0091-437E-424B-9038-33CE184FDC66}
+		{579331BB-BD1B-4614-B061-4D1ECA412E5A} = {32DC1001-93D9-4565-AD07-D34D6DB32D73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BFAB8A6-F10B-436D-8628-525E27F1BD81}
