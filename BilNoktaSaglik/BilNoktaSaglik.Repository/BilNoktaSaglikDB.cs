@@ -19,8 +19,15 @@ namespace BilNoktaSaglik.Repository
         }
 
         public DbSet<Rules> Rules { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Countries> Countries { get; set; }
 
+        public DbSet<Customers> Customers { get; set; }
+        public DbSet<Employees> Employees { get; set; }
 
+        public DbSet<OurServices> OurServices{ get; set; }
+
+        public DbSet<ServiceCategories> ServiceCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

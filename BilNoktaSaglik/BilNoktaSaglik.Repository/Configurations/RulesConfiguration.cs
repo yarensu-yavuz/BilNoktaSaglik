@@ -17,7 +17,7 @@ namespace BilNoktaSaglik.Repository.Configurations
         {
 
             builder.HasKey(k => k.RulesId);//PK=> Primary Key=>
-            builder.Property(k=>k.RulesId).UseIdentityColumn();
+            builder.Property(k=>k.RulesId).UseIdentityColumn();//Identity
             builder.Property(k => k.RuleName).IsRequired();
             //builder.Property(k => k.RuleName).IsRequired(false);
         }

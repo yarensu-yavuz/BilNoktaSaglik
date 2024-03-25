@@ -8,9 +8,9 @@ using BilNoktaSaglik.Core.BilNoktaSaglikDatabase;
 
 namespace BilNoktaSaglik.Repository.Repositories
 {
-    public class Rules : Repository<Rules>
+    public class RulesRepository : Repository<RulesRepository>
     {
-        public Rules(BilNoktaSaglikDB bilNoktaSaglikDB) : base(bilNoktaSaglikDB)
+        public RulesRepository(BilNoktaSaglikDB bilNoktaSaglikDB) : base(bilNoktaSaglikDB)
         {
         
         }

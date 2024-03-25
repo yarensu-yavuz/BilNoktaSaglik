@@ -4,6 +4,7 @@ using BilNoktaSaglik.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilNoktaSaglik.Repository.Migrations
 {
     [DbContext(typeof(BilNoktaSaglikDB))]
-    partial class BilNoktaSaglikDBModelSnapshot : ModelSnapshot
+    [Migration("20240324235210_add_servicescategoriesTable")]
+    partial class add_servicescategoriesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

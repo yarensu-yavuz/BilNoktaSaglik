@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace BilNoktaSaglik.Core.IRepositories
 {
-    public interface IRules:IRepository<Rules>
+    public interface IEmployeesRepository : IRepository<Employees>
     {
+        Employees EmployeeIsActive(int EmployeeIs);
+        List<Employees> EmployeesActive(bool active);
 
     }
 }

@@ -4,6 +4,7 @@ using BilNoktaSaglik.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilNoktaSaglik.Repository.Migrations
 {
     [DbContext(typeof(BilNoktaSaglikDB))]
-    partial class BilNoktaSaglikDBModelSnapshot : ModelSnapshot
+    [Migration("20240324233227_add_ourservicesTable")]
+    partial class add_ourservicesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,30 +161,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                     b.HasKey("RulesId");
 
                     b.ToTable("Rules");
-                });
-
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.ServiceCategories", b =>
-                {
-                    b.Property<int>("ServicesCategoriesId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServicesCategoriesId"));
-
-                    b.Property<DateTime>("AddedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CategoriesDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ServicesCategoriesName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ServicesCategoriesId");
-
-                    b.ToTable("ServiceCategories");
                 });
 
             modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Users", b =>
