@@ -11,5 +11,8 @@ namespace BilNoktaSaglik.Core.BilNoktaSaglikDatabase
         public int UsersId { get; set; }
         public string UserName{ get; set; }
         public string UserPassword{ get; set; }
+        public int RuleId { get; set; }
+        //FK işlemleri
+        public Rules Rule { get; set; }
     }
 }

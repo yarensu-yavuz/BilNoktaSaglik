@@ -4,6 +4,7 @@ using BilNoktaSaglik.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilNoktaSaglik.Repository.Migrations
 {
     [DbContext(typeof(BilNoktaSaglikDB))]
-    partial class BilNoktaSaglikDBModelSnapshot : ModelSnapshot
+    [Migration("20240324235210_add_servicescategoriesTable")]
+    partial class add_servicescategoriesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -198,9 +201,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RuleId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -210,8 +210,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UsersId");
-
-                    b.HasIndex("RuleId");
 
                     b.ToTable("Users");
                 });
@@ -225,22 +223,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Countries");
-                });
-
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Users", b =>
-                {
-                    b.HasOne("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Rules", "Rule")
-                        .WithMany("Users")
-                        .HasForeignKey("RuleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Rule");
-                });
-
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Rules", b =>
-                {
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

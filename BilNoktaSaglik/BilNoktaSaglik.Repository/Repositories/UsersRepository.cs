@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BilNoktaSaglik.Repository.Repositories
 {
-    public class Users : Repository<Users>
+    public class UsersRepository : Repository<UsersRepository>
     {
-        public Users(BilNoktaSaglikDB bilNoktaSaglikDB) : base(bilNoktaSaglikDB)
+        public UsersRepository(BilNoktaSaglikDB bilNoktaSaglikDB) : base(bilNoktaSaglikDB)
         {
         }
     }

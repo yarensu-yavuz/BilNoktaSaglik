@@ -4,6 +4,7 @@ using BilNoktaSaglik.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BilNoktaSaglik.Repository.Migrations
 {
     [DbContext(typeof(BilNoktaSaglikDB))]
-    partial class BilNoktaSaglikDBModelSnapshot : ModelSnapshot
+    [Migration("20240324231946_add_employeesTable")]
+    partial class add_employeesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,27 +125,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.OurServices", b =>
-                {
-                    b.Property<int>("OurServicesId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OurServicesId"));
-
-                    b.Property<string>("OurServicesDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OurServicesName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("OurServicesId");
-
-                    b.ToTable("OurServices");
-                });
-
             modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Rules", b =>
                 {
                     b.Property<int>("RulesId")
@@ -160,30 +142,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                     b.ToTable("Rules");
                 });
 
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.ServiceCategories", b =>
-                {
-                    b.Property<int>("ServicesCategoriesId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ServicesCategoriesId"));
-
-                    b.Property<DateTime>("AddedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CategoriesDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ServicesCategoriesName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ServicesCategoriesId");
-
-                    b.ToTable("ServiceCategories");
-                });
-
             modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Users", b =>
                 {
                     b.Property<int>("UsersId")
@@ -198,9 +156,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RuleId")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -210,8 +165,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UsersId");
-
-                    b.HasIndex("RuleId");
 
                     b.ToTable("Users");
                 });
@@ -225,22 +178,6 @@ namespace BilNoktaSaglik.Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Countries");
-                });
-
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Users", b =>
-                {
-                    b.HasOne("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Rules", "Rule")
-                        .WithMany("Users")
-                        .HasForeignKey("RuleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Rule");
-                });
-
-            modelBuilder.Entity("BilNoktaSaglik.Core.BilNoktaSaglikDatabase.Rules", b =>
-                {
-                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

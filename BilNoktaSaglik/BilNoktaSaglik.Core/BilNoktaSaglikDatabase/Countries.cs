@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace BilNoktaSaglik.Core.BilNoktaSaglikDatabase
 {
-    public class Rules
+    public class Countries
     {
+        public object Customers;
 
-        public int RulesId { get; set; }
-        public string RuleName { get; set; }
-        //FK işlemleri
-        public List<Users> Users { get; set; }
-
+        public int CountriesId { get; set; }
+        public string CountryName { get; set; }
     }
 }
