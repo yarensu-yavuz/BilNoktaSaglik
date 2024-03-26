@@ -15,9 +15,5 @@ namespace BilNoktaSaglik.Repository.Repositories
 
         }
 
-        public List<OurServices> CustomerService(int customerId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

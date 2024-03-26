@@ -17,7 +17,10 @@ namespace BilNoktaSaglik.Repository.Repositories
 
         public List<Rules> RuleList(int ruleId)
         {
-            throw new NotImplementedException();
+            var list = _bilNoktaSaglikDB.Rules.Where(k => k.RulesId == ruleId).ToList();
+            var list2 = GetAllTableWithCase(k=>k.RulesId == ruleId);   
+
+            return list2;
         }
     }
 }

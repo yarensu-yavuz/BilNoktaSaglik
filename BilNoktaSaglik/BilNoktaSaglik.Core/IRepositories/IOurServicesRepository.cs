@@ -10,7 +10,7 @@ namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IOurServicesRepository : IRepository <OurServices>
     {
-        List<OurServices> CustomerService(int customerId);
+      
 
     }
 }

@@ -14,9 +14,14 @@ namespace BilNoktaSaglik.Repository.Repositories
         {
         }
 
+        /// <summary>
+        /// Aktifleri listelemek için parametre 1(true), pasifleri listelemek için 0(false) gönderilir
+        /// </summary>
+        /// <param name="active"></param>
+        /// <returns></returns>
         public List<Users> UsersIsActive(bool active)
         {
-            throw new NotImplementedException();
+            return GetAllTableWithCase(y => y.IsActive == active);
         }
     }
 }

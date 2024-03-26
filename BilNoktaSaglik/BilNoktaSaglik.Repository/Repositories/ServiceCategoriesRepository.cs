@@ -15,9 +15,5 @@ namespace BilNoktaSaglik.Repository.Repositories
 
         }
 
-        public List<ServiceCategories> ServiceCategoryIsActive(bool active)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
