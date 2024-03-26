@@ -9,7 +9,7 @@ namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IServiceCategoriesRepository : IRepository<ServiceCategories>
     {
-       ServiceCategories ServiceCategoryIsActive(int ServiceCategoryIs);
+
         List<ServiceCategories> ServiceCategoryIsActive(bool active);
     }
 }

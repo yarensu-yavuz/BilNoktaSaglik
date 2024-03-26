@@ -9,8 +9,15 @@ namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IRulesRepository:IRepository<Rules>
     {
-        Rules RuleIsActive(int RuleIs);
-        List<Rules> RulesIsActive(bool active);
+        /// <summary>
+        /// Her bir Rule'de olan User'ları listeler
+        /// </summary>
+        /// <param name="ruleId"></param>
+        /// <returns></returns>
+        List<Rules> RuleList(int ruleId);
+        //Admin=> Resül , Yare, Su, Helim, Yaşar
+        //Persoenl=> Mehmet, Ayşe, Roj, Asur
+
 
     }
 }

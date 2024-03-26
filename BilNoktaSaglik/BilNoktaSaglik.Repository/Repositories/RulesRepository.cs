@@ -8,12 +8,16 @@ using BilNoktaSaglik.Core.BilNoktaSaglikDatabase;
 
 namespace BilNoktaSaglik.Repository.Repositories
 {
-    public class RulesRepository : Repository<RulesRepository>
+    public class RulesRepository : Repository<Rules>, IRulesRepository
     {
         public RulesRepository(BilNoktaSaglikDB bilNoktaSaglikDB) : base(bilNoktaSaglikDB)
         {
         
         }
 
+        public List<Rules> RuleList(int ruleId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

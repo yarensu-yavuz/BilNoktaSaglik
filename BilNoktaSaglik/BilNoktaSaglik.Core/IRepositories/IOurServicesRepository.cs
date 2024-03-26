@@ -10,7 +10,7 @@ namespace BilNoktaSaglik.Core.IRepositories
 {
     public interface IOurServicesRepository : IRepository <OurServices>
     {
-        OurServices OurServiceIsActive(int OurServiceIs);
-        List<OurServices> OurServicesIsActive(bool active);
+        List<OurServices> CustomerService(int customerId);
+
     }
 }
