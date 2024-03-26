@@ -18,6 +18,8 @@ namespace BilNoktaSaglik.Repository.Configurations
             builder.Property(k => k.UsersId).UseIdentityColumn();
             builder.Property(k => k.UserName).IsRequired();
             builder.Property(k => k.UserPassword).IsRequired();
+            //1 Rule'de 1'den fazla User olabilir=> 1-Sonsuz
+            builder.HasOne(k => k.Rule).WithMany(k => k.Users).HasForeignKey(k => k.RuleId);
         }
     }
 }
